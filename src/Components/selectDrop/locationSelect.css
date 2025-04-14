@@ -1,0 +1,55 @@
+.locationSelect {
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .arrowIcon {
+    font-size: 16px;
+    margin-left: 6px;
+    color: #444;
+    opacity:0.5;
+  }
+
+  .locationIcon {
+    font-size: 16px;
+    margin-right: 8px;
+    color: #444;
+    opacity:0.5;
+  }
+
+  .locationselectDrop {
+    padding: 8px 14px;
+    height:60px;
+    background: white;
+    border: 1px solid #7dc3f5;
+    cursor: pointer;
+    white-space: nowrap;
+}
+  
+  .dropdownContent {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    z-index: 10;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .dropdownContent li {
+    list-style: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .dropdownContent li:hover {
+    background: #7dc3f5;
+    color: white;
+  }
+  
