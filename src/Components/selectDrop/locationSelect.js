@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../selectDrop/locationSelect.css'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import LocationPinIcon from '@mui/icons-material/LocationPin';
+import LocationPinIcon from '@mui/icons-material/LocationOnOutlined';
 
 const LocationSelect = () => {
   const [countries, setCountries] = useState([]);
