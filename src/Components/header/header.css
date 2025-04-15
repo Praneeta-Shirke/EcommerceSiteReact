@@ -17,3 +17,18 @@ header .headerTabs li{position: relative;padding: 13px;}
 header .headerTabs li span .headerIcon{margin-right:10px;}
 header .headerTabs li span{ cursor: pointer;}
 header .headerTabs li span .badge{font-weight: 400; position: absolute;top: 1px;left :21px;}
+header .headerList {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #7dc3f5;
+    padding: 15px;
+    color:white;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+  header .headerList li{
+    margin-left:40px;
+    margin-right: 40px;
+  }
+  
