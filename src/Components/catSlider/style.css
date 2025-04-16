@@ -1,0 +1,18 @@
+.catSliderSection{width:100%; height: auto; padding:30px 0px }
+.ads-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* spacing between images */
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .ad-img {
+    width: 20%;
+    max-width: 32%; /* Makes sure 3 images fit in one line */
+    border-radius: 10px; /* optional for rounded edges */
+    object-fit: cover;
+  }
+  
