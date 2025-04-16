@@ -6,4 +6,4 @@ body{font-family:'Roboto',sans-serif;}
 
 .cursor{cursor:pointer;}
 
-.hd{font-size: 38px;font: weight 600px; padding: 10px;}
+.hd{font-size: 30px;font: weight 600px; padding: 10px;background-color: #7dc3f5; border-radius:30px;color: white; text-align: center;}

@@ -9,14 +9,16 @@ import '../catSlider/style.css'; // your CSS file
 const AdBanner = () => {
   return (
     <>
-    <h2 className='hd'>Featured</h2>
-    <div className="ads-row">
+            <h2 className='mb-4 container-fluid py-4'>Featured</h2>
+    <section className="ads-row">
+      <div className='container-fluid'>
       <img src={ad1} alt="Ad 1" className="ad-img" />
       <img src={ad2} alt="Ad 2" className="ad-img" />
-      <img src={ad3} alt="Ad 3" className="ad-img" />
+      {/* <img src={ad3} alt="Ad 3" className="ad-img" /> */}
       <img src={ad4} alt="Ad 4" className="ad-img" />
       <img src={ad5} alt="Ad 5" className="ad-img" />
-    </div>
+      </div>
+    </section>
     </>
   );
 };
