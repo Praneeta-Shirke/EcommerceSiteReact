@@ -103,10 +103,10 @@ const Header = () => {
             </div>
             <div>
                 <ul className="headerList">
-                    <li className="list-inline-item"><Link to="/">Home</Link></li>
-                    <li className="list-inline-item"><Link to="/About">About</Link></li>
-                    <li className="list-inline-item"><Link to="/Blogs">Blogs</Link></li>
-                    <li className="list-inline-item"><Link to="/Contact">Contact</Link></li>
+                    <li className="list-inline-item"><Link to="/" className="custom-link">Home</Link></li>
+                    <li className="list-inline-item"><Link to="/About" className="custom-link">About</Link></li>
+                    <li className="list-inline-item"><Link to="/Blogs" className="custom-link">Blogs</Link></li>
+                    <li className="list-inline-item"><Link to="/Contact" className="custom-link">Contact</Link></li>
                 </ul>
             </div>
           </div>

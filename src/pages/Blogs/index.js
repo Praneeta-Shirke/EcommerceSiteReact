@@ -8,7 +8,6 @@ const Blog = () => {
       <p className="blog-text">
         Welcome to our blog! Stay tuned for updates, product reviews, tips, and more from our team.
       </p>
-      {/* You can map blog posts here later */}
     </div>
   );
 };
