@@ -21,7 +21,7 @@
     height: 100px !important;
     border-radius: 50% !important;
     background: #F2F3F4 !important;
-    z-index: 1000 !important;
+    z-index: 0 !important;
     transition: all 0.2s ease-in-out;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }

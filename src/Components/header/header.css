@@ -3,6 +3,7 @@ header {
   height: auto;
   margin: auto;
   padding: 30px 0px;
+  background: white;
 }
 
 header .headerSearch {
