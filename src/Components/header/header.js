@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import "../header/header.css";
 
 import Logo from "../../assets/images/logo.png";
 import SearchIcon from "@mui/icons-material/Search";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 import Select from "../selectDrop/select";
 import { Block, Padding } from "@mui/icons-material";
@@ -53,14 +53,8 @@ const Header = () => {
                   ref={dropdownRef}
                   className="dropdownWrapper position-relative"
                 >
-                  <div
-                    className="selectDrop cursor"
-                    onClick={() => setShowDropdown((prev) => !prev)}
-                  >
-                    All Categories
-                    <KeyboardArrowDownIcon className="arrowIcon" />
-                  </div>
-                  {showDropdown && <Select />}
+                  
+                  <Select />
                 </div>
                 <div className="search">
                   <input type="text" placeholder="Search for items.." />
@@ -109,10 +103,10 @@ const Header = () => {
             </div>
             <div>
                 <ul className="headerList">
-                    <li className="list-inline-item">Home</li>
-                    <li className="list-inline-item">About</li>
-                    <li className="list-inline-item">Blogs</li>
-                    <li className="list-inline-item">Contact</li>
+                    <li className="list-inline-item"><Link to="/">Home</Link></li>
+                    <li className="list-inline-item"><Link to="/About">About</Link></li>
+                    <li className="list-inline-item"><Link to="/Blogs">Blogs</Link></li>
+                    <li className="list-inline-item"><Link to="/Contact">Contact</Link></li>
                 </ul>
             </div>
           </div>
