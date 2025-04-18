@@ -10,10 +10,10 @@ function RoutesApp() {
   return (
     <div className="container mt-3">
       <Routes>
-        <Route path="/" element={<Home />} />
         <Route path="/About" element={<About/>} />
         <Route path="/Blogs" element={<Blog/>} />
         <Route path="/Contact" element={<Contact/>} />
+        <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound/>} />
       </Routes>
     </div>

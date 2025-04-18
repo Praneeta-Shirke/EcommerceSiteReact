@@ -44,7 +44,7 @@ const ElectronicsListing = () => {
     <div className="electronics-section container-fluid">
       {/* <h2 className="section-heading">Electronics</h2>
       <div className="product-grid">
-        {electronicsProducts.map((item) => (
+        {electronicsProducts?.map((item) => (
           <ProductCard {...item} />
         ))}
       </div> */}

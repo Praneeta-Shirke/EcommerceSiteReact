@@ -20,7 +20,6 @@ const Select = () => {
       .then((res) => res.json())
       .then((res) => {
         setCategory(res);
-        console.log(res);
       });
   }, []);
   return (
