@@ -17,8 +17,8 @@ function App() {
   return (
     <>
       <Header products={products} setProducts={setProducts}/>
-      <Home products={products} setProducts={setProducts}/>
-      <ElectronicsListing/>
+      {/* <Home products={products} setProducts={setProducts}/> */}
+      {/* <ElectronicsListing/> */}
       <RoutesApp/>
     {/* </Router> */}
     <Footer/>

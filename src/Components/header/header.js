@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../header/header.css";
 
 import Logo from "../../assets/images/logo.png";
@@ -17,6 +17,7 @@ const Header = ({setProducts}) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [searchText, setSearchText] = useState("");
   const dropdownRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -89,7 +90,7 @@ const Header = ({setProducts}) => {
                     </span>
                   </li>
 
-                  <li className="list-inline-item">
+                  <li className="list-inline-item" onClick={() => navigate("/cart")}>
                     <span>
                       <span
                         className="badge rounded-circle"

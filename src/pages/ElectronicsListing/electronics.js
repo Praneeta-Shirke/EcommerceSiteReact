@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import ProductCard from '../../Components/ProductCard';
+import ProductCard from '../../Components/Product/ProductCard';
 import '../ElectronicsListing/electronics.css';
 
 const electronicsProducts =
