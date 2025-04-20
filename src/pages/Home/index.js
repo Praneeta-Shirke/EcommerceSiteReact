@@ -17,6 +17,7 @@ const Home = ({products, setProducts, setCart, cart}) => {
         setProducts?.(res?.products || res);
       });
   }, [pathname]);
+  console.log("products", products)
   return (
     <>
       <Slider />

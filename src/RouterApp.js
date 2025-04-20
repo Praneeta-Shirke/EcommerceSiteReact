@@ -22,6 +22,7 @@ function RoutesApp() {
         <Route path="/Login" element={<Login/>} />
         <Route path="/Signup" element={<Signup/>} />
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart}/>} />
+        {/* <Route path="/beauty" element={<Home products={products} setProducts={setProducts} cart={cart} setCart={setCart}/>} /> */}
         <Route path="/" element={<Home products={products} setProducts={setProducts} cart={cart} setCart={setCart}/>} />
         <Route path="*" element={<NotFound/>} />
       </Routes>
