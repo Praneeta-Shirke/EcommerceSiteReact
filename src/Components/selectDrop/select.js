@@ -11,7 +11,7 @@ const Select = () => {
   const handleCategoryClick = (category) => {
     setSelectedData(category?.name);
     setShowDropdown(false)
-    navigate(`/${category.slug}`);
+    navigate(`?category=${category.slug}`);
   };
 
   const [category, setCategory] = useState([]);

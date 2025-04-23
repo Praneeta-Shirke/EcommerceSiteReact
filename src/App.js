@@ -16,12 +16,10 @@ function App() {
 
   return (
     <>
-      <Header products={products} setProducts={setProducts}/>
       {/* <Home products={products} setProducts={setProducts}/> */}
       {/* <ElectronicsListing/> */}
-      <RoutesApp/>
+      <RoutesApp products={products} setProducts={setProducts}/>
     {/* </Router> */}
-    <Footer/>
     </>
   );
 }

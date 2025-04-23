@@ -34,6 +34,10 @@ const Header = ({ setProducts }) => {
 
   const handleLogout = () => {
     console.log("Logged Out");
+    
+sessionStorage.clear();
+navigate("/login")
+
     // You can add more logic like clearing localStorage, etc.
   };
 
@@ -70,9 +74,10 @@ const Header = ({ setProducts }) => {
                 <SearchIcon
                   className="searchIcon cursor"
                   onClick={() => {
-                    fetch(`https://dummyjson.com/products/search?q=${searchText}&limit=200`)
+                    fetch(`https://dummyjson.com/products/search?q=${searchText.trim()}&limit=200`)
                       .then((res) => res.json())
                       .then((res) => {
+                        console.log("Search result:",res.products);
                         setProducts(res?.products);
                         setSearchText("");
                       });
