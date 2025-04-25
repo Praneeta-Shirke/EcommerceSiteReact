@@ -6,18 +6,22 @@ import Logo from "../../assets/images/logo.png";
 import SearchIcon from "@mui/icons-material/Search";
 
 import Select from "../selectDrop/select";
-import { Block, Padding } from "@mui/icons-material";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 
 import LocationSelect from "../selectDrop/locationSelect";
+import { cartsAtom, productsAtom } from "../../Recoil/atom";
+import { useAtom } from "jotai";
 
-const Header = ({ setProducts }) => {
+const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [searchText, setSearchText] = useState("");
   const dropdownRef = useRef(null);
   const navigate = useNavigate();
+const [products, setProducts] = useAtom(productsAtom);
+    const [cart, setCart] = useAtom(cartsAtom);
+
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -34,13 +38,13 @@ const Header = ({ setProducts }) => {
 
   const handleLogout = () => {
     console.log("Logged Out");
-    
-sessionStorage.clear();
-navigate("/login")
 
-    // You can add more logic like clearing localStorage, etc.
+    sessionStorage.clear();
+    navigate("/login");
+
+    window.location.reload();
   };
-
+  
   return (
     <header>
       <div className="container-fluid">
@@ -59,7 +63,10 @@ navigate("/login")
 
           <div className="col-sm-5 d-flex">
             <div className="headerSearch d-flex align-items-center  position-relative">
-              <div ref={dropdownRef} className="dropdownWrapper position-relative">
+              <div
+                ref={dropdownRef}
+                className="dropdownWrapper position-relative"
+              >
                 <Select />
               </div>
               <div className="search">
@@ -74,10 +81,12 @@ navigate("/login")
                 <SearchIcon
                   className="searchIcon cursor"
                   onClick={() => {
-                    fetch(`https://dummyjson.com/products/search?q=${searchText.trim()}&limit=200`)
+                    fetch(
+                      `https://dummyjson.com/products/search?q=${searchText.trim()}&limit=200`
+                    )
                       .then((res) => res.json())
                       .then((res) => {
-                        console.log("Search result:",res.products);
+                        console.log("Search result:", res.products);
                         setProducts(res?.products);
                         setSearchText("");
                       });
@@ -92,7 +101,7 @@ navigate("/login")
               <LocationSelect />
             </div>
             <ul className="list d-flex list-inline mb-0 headerTabs">
-              <li className="list-inline-item">
+              {/* <li className="list-inline-item">
                 <span>
                   <span
                     className="badge rounded-circle"
@@ -103,15 +112,18 @@ navigate("/login")
                   <FavoriteBorderOutlinedIcon className="headerIcon" />
                   WishList
                 </span>
-              </li>
+              </li> */}
 
-              <li className="list-inline-item" onClick={() => navigate("/cart")}>
+              <li
+                className="list-inline-item"
+                onClick={() => navigate("/cart")}
+              >
                 <span>
                   <span
                     className="badge rounded-circle"
                     style={{ backgroundColor: "#7dc3f5", color: "white" }}
                   >
-                    3
+                    {cart?.length}
                   </span>
                   <ShoppingCartOutlinedIcon className="headerIcon" />
                   Cart

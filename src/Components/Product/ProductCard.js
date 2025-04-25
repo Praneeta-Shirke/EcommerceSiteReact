@@ -4,7 +4,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import fallbackImage from "../../assets/images/FallbackImage.png";
 import ProductModal from "./ProductModal";
 
-const ProductCard = ({ prod, setCart, isCart = false }) => {
+const ProductCard = ({ prod, setCart, cart, isCart = false }) => {
   const { images, title, price } = prod;
   let [showModal, setShowModal] = useState(false);
   const handleImageError = (e) => {
@@ -12,6 +12,7 @@ const ProductCard = ({ prod, setCart, isCart = false }) => {
     e.target.src = fallbackImage;
   };
   const addCart = (product) => {
+    console.log("......cart", cart, product);
     setCart((prev) => [product, ...prev]);
   };
   return (

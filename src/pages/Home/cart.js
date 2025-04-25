@@ -3,11 +3,15 @@ import Slider from "../Home/slider/index.js";
 import CatSlider from "../../Components/catSlider/index.js";
 import ProductCard from "../../Components/Product/ProductCard.js";
 import { useLocation, useParams } from "react-router-dom";
+import { useAtom } from "jotai";
+import { cartsAtom } from "../../Recoil/atom.js";
 
 // search https://dummyjson.com/products/search?limit=200&q=popular
 // category
 
-const Cart = ({setCart, cart}) => {
+const Cart = () => {
+    const [cart, setCart] = useAtom(cartsAtom);
+  console.log("cara=t", cart)
   return (
     <>
       <section className="product-section container-fluid py-4">

@@ -17,7 +17,7 @@ const Signup = () => {
       sessionStorage.setItem("name", userData?.name);
       sessionStorage.setItem("email", userData?.email);
       navigate("/")
-
+      window.location.reload();
     }
   }
   return (
@@ -25,9 +25,9 @@ const Signup = () => {
       <div className="auth-box">
         <h2 className="auth-title">Sign Up</h2>
         <form onSubmit={handleSubmit} autoComplete="off">
-          <input type="text" placeholder="Name" className="auth-input" required name="name" value={userData?.name} onChange={onChangeData} autoComplete="off"/>
-          <input type="email" placeholder="Email" className="auth-input" required name="email" value={userData?.email} onChange={onChangeData} autoComplete="off"/>
-          <input type="password" placeholder="Password" className="auth-input" required name="password" value={userData?.password} onChange={onChangeData} autoComplete="off"/>
+          <input type="text" placeholder="Name" className="auth-input" required name="name" value={userData?.name} onChange={onChangeData}/>
+          <input type="email" placeholder="Email" className="auth-input" required name="email" value={userData?.email} onChange={onChangeData}/>
+          <input type="password" placeholder="Password" className="auth-input" required name="password" value={userData?.password} onChange={onChangeData}/>
           <button className="auth-button" type="submit" onClick={onAdd}>Sign Up</button>
         </form>
         <p className="auth-footer">

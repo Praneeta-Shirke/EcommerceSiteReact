@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-column">
           <h5>Company</h5>
           <ul>
-            <li>About Us</li>
+            <li navigate="/About">About Us</li>
             <li>Careers</li>
             <li>Press</li>
           </ul>

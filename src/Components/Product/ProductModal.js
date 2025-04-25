@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ProductModal.css';
 
 const ProductModal = ({ product, onClose, addCart }) => {
+  const [message, setMessage] = useState('');
+  const handleOnClick = () =>{
+    alert('Congratulations! Order is Confirmed!! ✔');
+  }
   if (!product) return null;
-
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={e => e.stopPropagation()}>
@@ -12,7 +15,7 @@ const ProductModal = ({ product, onClose, addCart }) => {
         <h3>{product.title}</h3>
         <p>Price: ₹{(product.price * 100).toFixed()}</p>
         <p>Description: {product.description || "No description available."}</p>
-        <button className="add-to-cart-btn" onClick={() => addCart(product)}>Add to Cart</button>
+        <button className="add-to-cart-btn" onClick={handleOnClick}>Buy now!</button>
       </div>
     </div>
   );
